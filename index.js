@@ -13,6 +13,11 @@ const app = express();
 app.use(cors({ origin: 'https://newfrontend-kohl.vercel.app/', credentials: true }));
 app.use(express.json());
 
+
+// Trust proxy to get real IP address
+app.set('trust proxy', true);
+
+
 // MongoDB connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/tradingview', {
   useNewUrlParser: true,
