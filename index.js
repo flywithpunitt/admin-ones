@@ -10,7 +10,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({ origin: 'https://newfrontend-kohl.vercel.app/', credentials: true }));
+app.use(cors({ origin: 'https://newfrontend-kohl.vercel.app', credentials: true }));
 app.use(express.json());
 
 
